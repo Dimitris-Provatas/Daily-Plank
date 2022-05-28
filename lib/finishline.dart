@@ -69,6 +69,23 @@ class _FinishLineState extends State<FinishLine> {
             ),
           ),
         ),
+        TextButton(
+          style: TextButton.styleFrom(
+            backgroundColor: Colors.blue,
+            shadowColor: Colors.grey[700],
+          ),
+          onPressed: () => Navigator.of(context).pushNamed(
+            '/progress',
+          ),
+          child: const Text(
+            'View Progress',
+            style: TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
+          ),
+        ),
       ],
     );
   }
