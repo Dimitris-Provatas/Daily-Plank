@@ -24,7 +24,8 @@ initDB() async {
     path.join(await getDatabasesPath(), dbName),
     onCreate: (db, version) {
       // https://www.sqlite.org/datatype3.html
-      return db.execute("""
+      return db.execute(
+        """
         CREATE TABLE progress(
           id INTEGER PRIMARY KEY,
           date TEXT,
@@ -32,7 +33,8 @@ initDB() async {
           secondsElapsed INTEGER,
           secondsSelected INTEGER
         )
-      """);
+      """,
+      );
     },
     version: 1,
   );
