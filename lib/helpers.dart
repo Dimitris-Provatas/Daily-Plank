@@ -30,6 +30,18 @@ class FinishArguments {
   String toString() {
     return 'FinishArguments{date: $date, didFinish: $didFinish, secondsSelected: $secondsSelected, secondsElapsed: $secondsElapsed}';
   }
+
+  @override
+  bool operator ==(other) {
+    return (other is FinishArguments) &&
+        other.date == date &&
+        other.didFinish == didFinish &&
+        other.secondsSelected == secondsSelected &&
+        other.secondsElapsed == secondsElapsed;
+  }
+
+  @override
+  int get hashCode => super.hashCode;
 }
 
 const String dbName = 'plank_db.db';
